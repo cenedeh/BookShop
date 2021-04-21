@@ -33,7 +33,7 @@ namespace BookShop.Application.UseCases.Book.Query
                     IsbnCode = book.IsbnCode,
                     Title = book.Title,
                     Category = book.Category.Title,
-                    Authors = authors.Select(x=> new GetAuthorsDto()
+                    Authors = authors.Select(x=> new GetAuthorsDto
                     {
                         Id = x.Id,
                         FirstName = x.FirstName,
