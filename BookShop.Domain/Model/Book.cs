@@ -7,10 +7,10 @@ namespace BookShop.Domain.Model
     {
         public Book(){ }
 
-        private Book(string title, string isbnCode, Category category){
+        private Book(string title, string isbnCode, int categoryId){
             Title = title;
             IsbnCode = isbnCode;
-            Category = category;
+            CategoryId = categoryId;
         }
 
         public int Id { get; set; }
@@ -18,12 +18,13 @@ namespace BookShop.Domain.Model
         public string IsbnCode { get; set; }
         public DateTime Published { get; set; }
         public Category Category { get; set; }
+        public int CategoryId { get; set; }
         public ICollection<AuthorsBooks> Books { get; set; } = new List<AuthorsBooks>();
         
         public class Factory
         {
-            public static Book Instance(string title, string isbnCode, Category category) => 
-                new Book(title, isbnCode, category);
+            public static Book Instance(string title, string isbnCode, int categoryId) => 
+                new Book(title, isbnCode, categoryId);
         }
     }
 }
