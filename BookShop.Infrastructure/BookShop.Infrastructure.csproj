@@ -4,4 +4,9 @@
     <TargetFramework>net5.0</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\BookShop.Application\BookShop.Application.csproj" />
+    <ProjectReference Include="..\BookShop.Domain\BookShop.Domain.csproj" />
+  </ItemGroup>
+
 </Project>
