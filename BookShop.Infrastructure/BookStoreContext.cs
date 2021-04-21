@@ -18,6 +18,9 @@ namespace BookShop.Infrastructure
                 .HasConstraintName("FK_AuthorsBooks_Book");
             builder.Entity<AuthorsBooks>().HasOne(x => x.Author).WithMany(x => x.Books).HasForeignKey(x => x.AuthorId).OnDelete(DeleteBehavior.Cascade)
                 .HasConstraintName("FK_AuthorsBooks_Author");
+            builder.Entity<Book>()
+                .HasIndex(b => new { b.IsbnCode, b.Title })
+                .IsUnique();
             base.OnModelCreating(builder);
 
         }
