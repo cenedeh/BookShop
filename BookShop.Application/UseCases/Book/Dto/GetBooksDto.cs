@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace BookShop.Application.UseCases.Book.Dto
 {
@@ -9,5 +10,6 @@ namespace BookShop.Application.UseCases.Book.Dto
         public string IsbnCode { get; set; }
         public DateTime Published { get; set; }
         public string Category { get; set; }
+        public List<GetAuthorsDto> Authors { get; set; }
     }
 }
