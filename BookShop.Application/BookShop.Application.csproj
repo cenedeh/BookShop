@@ -13,4 +13,8 @@
     <PackageReference Include="MediatR" Version="9.0.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\BookShop.Domain\BookShop.Domain.csproj" />
+  </ItemGroup>
+
 </Project>
