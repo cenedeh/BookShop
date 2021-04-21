@@ -1,0 +1,136 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>BookShop</name>
+    </assembly>
+    <members>
+        <member name="M:BookShop.Controllers.AuthenticationController.Login(BookShop.Application.UseCases.Authentication.Query.LoginQuery)">
+            <summary>
+            This endpoint is used for login
+            </summary>
+            <param name="login"></param>
+            <returns></returns>
+            <remarks>
+            Sample Request:
+            
+                POST /login
+                {
+                    "Username": "chuxszee@gmail.com",
+                    "Password": "12345"
+                }
+            </remarks>
+        </member>
+        <member name="M:BookShop.Controllers.AuthenticationController.Register(BookShop.Application.UseCases.Authentication.Command.RegisterUserCommand)">
+            <summary>
+            This endpoint is used for registration
+            </summary>
+            <param name="register"></param>
+            <returns></returns>
+            <remarks>
+            Sample Request:
+            
+                POST /register
+                {
+                    "Username": "chuxszee@gmail.com",
+                    "Password": "12345"
+                }
+            </remarks>
+        </member>
+        <member name="M:BookShop.Controllers.BooksController.AddBook(BookShop.Application.UseCases.Book.Command.AddBooksCommand)">
+            <summary>
+            This endpoint saves a new book
+            </summary>
+            <param name="book"></param>
+            <returns></returns>
+            <remarks>
+            Sample Request:
+            
+                POST /addBook
+                {
+                    "title": "James Obodo",
+                    "isbnCode": "12hy2822",
+                    "category": "Fiction",
+                    "DatePublished" "2021-04-23T00:00:00"
+                }
+            </remarks>
+        </member>
+        <member name="M:BookShop.Controllers.BooksController.Books">
+            <summary>
+            this endpoint is used to get books
+            </summary>
+             <remarks>
+            Sample Request:
+            
+                GET /book
+                {
+                    "bookId": "1"
+                    
+                }
+            </remarks>
+            <returns></returns>
+        </member>
+        <member name="M:BookShop.Controllers.BooksController.BooksByAuthors">
+            <summary>
+            this endpoint is used to get books
+            </summary>
+             <remarks>
+            Sample Request:
+            
+                GET /booksByAuthor
+                {
+                    "authorId": "1"
+                    
+                }
+            </remarks>
+            <returns></returns>
+        </member>
+        <member name="M:BookShop.Controllers.BooksController.BooksByCategory">
+            <summary>
+            this endpoint is used to get books
+            </summary>
+             <remarks>
+            Sample Request:
+            
+                GET /booksByCategory
+                {
+                    "categoryId": "1"
+                    
+                }
+            </remarks>
+            <returns></returns>
+        </member>
+        <member name="M:BookShop.Controllers.BooksController.DeleteBook(BookShop.Application.UseCases.Book.Command.DeleteBooksCommand)">
+            <summary>
+            This endpoint deletes a book
+            </summary>
+            <param name="book"></param>
+            <returns></returns>
+            <remarks>
+            Sample Request:
+            
+                POST /deleteBook
+                {
+                    "bookId": "2"
+                }
+            </remarks>
+        </member>
+        <member name="M:BookShop.Controllers.BooksController.UpdateBook(BookShop.Application.UseCases.Book.Command.UpdateBooksCommand)">
+            <summary>
+            This endpoint updates a book
+            </summary>
+            <param name="book"></param>
+            <returns></returns>
+            <remarks>
+            Sample Request:
+            
+                POST /updateBook
+                {
+                    "title": "James Obodo",
+                    "isbnCode": "12hy2822",
+                    "category": "Fiction",
+                    "DatePublished" "2021-04-23T00:00:00"
+                }
+            </remarks>
+        </member>
+    </members>
+</doc>
