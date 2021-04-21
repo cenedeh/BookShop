@@ -49,6 +49,15 @@ namespace BookShop.Controllers
         /// <summary>
         /// this endpoint is used to get books
         /// </summary>
+        ///  <remarks>
+        /// Sample Request:
+        /// 
+        ///     GET /book
+        ///     {
+        ///         "bookId": "1"
+        ///         
+        ///     }
+        /// </remarks>
         /// <returns></returns>
         [HttpGet("/books")]
         [ProducesResponseType(typeof(List<GetBooksDto>), 200)]
