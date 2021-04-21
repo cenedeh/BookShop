@@ -1,5 +1,4 @@
-﻿using BookShop.Domain.Model;
-using System;
+﻿using System;
 
 namespace BookShop.Application.UseCases.Book.Dto
 {
@@ -9,6 +8,6 @@ namespace BookShop.Application.UseCases.Book.Dto
         public string Title { get; set; }
         public string IsbnCode { get; set; }
         public DateTime Published { get; set; }
-        public Category Category { get; set; }
+        public string Category { get; set; }
     }
 }

@@ -8,7 +8,7 @@ namespace BookShop.Application.UseCases.Book.Query
 {
     public class BookQuery : IRequest<GetBooksDto>
     {
-        public int AuthorId { get; set; }
+        public int BookId { get; set; }
 
         public class BooksHandler : IRequestHandler<BookQuery, GetBooksDto>
         {
@@ -20,14 +20,14 @@ namespace BookShop.Application.UseCases.Book.Query
 
             public async Task<GetBooksDto> Handle(BookQuery request, CancellationToken cancellationToken)
             {
-                var book = await _bookStoreRepository.FindById<Domain.Model.Book>(request.AuthorId); 
+                var book = await _bookStoreRepository.FindById<Domain.Model.Book>(request.BookId); 
                 var getBooksDto = new GetBooksDto
                 {
                     Id = book.Id,
                     Published = book.Published,
                     IsbnCode = book.IsbnCode,
                     Title = book.IsbnCode,
-                    Category = book.Category
+                    Category = book.Category.Title
                 };
                 return getBooksDto;
             }
