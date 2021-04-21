@@ -17,4 +17,8 @@
     <ProjectReference Include="..\BookShop.Domain\BookShop.Domain.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="UseCases\Book\Query\" />
+  </ItemGroup>
+
 </Project>
