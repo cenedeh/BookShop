@@ -26,7 +26,7 @@ namespace BookShop.Application.UseCases.Book.Query
                     Id = book.Id,
                     Published = book.Published,
                     IsbnCode = book.IsbnCode,
-                    Title = book.IsbnCode,
+                    Title = book.Title,
                     Category = book.Category.Title
                 };
                 return getBooksDto;
