@@ -12,7 +12,7 @@ namespace BookShop.Application.UseCases.Book.Command
         public string Title { get; set; }
         public string IsbnCode { get; set; }
         public int CategoryId { get; set; }
-        public DateTime Published { get; set; }
+        public DateTime DatePublished { get; set; }
 
         public class BooksCommandHandler : IRequestHandler<AddBooksCommand, bool>
         {
@@ -28,7 +28,7 @@ namespace BookShop.Application.UseCases.Book.Command
                     FindSingleByCondition<Domain.Model.Book>(x=>x.IsbnCode == request.IsbnCode);
                 if (doesBookExist != null) throw new DuplicateExceptionException("Duplicate entity found");
                 var book = Domain.Model.Book.Factory.Instance(request.Title, request.IsbnCode, request.CategoryId,
-                    request.Published);
+                    request.DatePublished);
                 _bookStoreRepository.Create(book);
                 var result = await _bookStoreRepository.SaveChanges();
                 return result;
