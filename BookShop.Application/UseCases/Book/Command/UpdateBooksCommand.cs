@@ -1,4 +1,5 @@
 ﻿using BookShop.Application.Interfaces;
+using BookShop.Domain.Model;
 using MediatR;
 using System;
 using System.Threading;
@@ -11,7 +12,7 @@ namespace BookShop.Application.UseCases.Book.Command
         public int BookId { get; set; }
         public string Title { get; set; }
         public string IsbnCode { get; set; }
-        public int CategoryId { get; set; }
+        public Category Category { get; set; }
         public DateTime DatePublished { get; set; }
 
         public class UpdateBooksCommandHandler : IRequestHandler<UpdateBooksCommand, bool>
@@ -29,7 +30,7 @@ namespace BookShop.Application.UseCases.Book.Command
                 book.Title = request.Title;
                 book.IsbnCode = request.IsbnCode;
                 book.Published = request.DatePublished;
-                book.CategoryId = request.CategoryId;
+                book.Category = request.Category;
                 _bookStoreRepository.Update(book);
                 var result = await _bookStoreRepository.SaveChanges();
                 return result;

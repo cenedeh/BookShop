@@ -132,5 +132,27 @@
                 }
             </remarks>
         </member>
+        <member name="T:BookShop.Startup">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:BookShop.Startup.#ctor(Microsoft.Extensions.Configuration.IConfiguration)">
+            <summary>
+            
+            </summary>
+            <param name="configuration"></param>
+        </member>
+        <member name="P:BookShop.Startup.Configuration">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:BookShop.Startup.ConfigureServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            
+            </summary>
+            <param name="services"></param>
+        </member>
     </members>
 </doc>
